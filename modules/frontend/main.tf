@@ -78,7 +78,7 @@ resource "aws_amplify_app" "frontend" {
   custom_rule {
     source = "/<*>"
     status = "200"
-    target = "https://xxx.cloudfront.net/<*>" 
+    target = "https://<*>.cloudfront.net/<*>" 
   }
 
   custom_rule {
@@ -159,13 +159,13 @@ resource "aws_amplify_domain_association" "main" {
   app_id      = aws_amplify_app.frontend.id
   domain_name = "${var.domain}"
 
-  # https://rbp.houseworksinc.co
+  # https://---.co
   sub_domain {
     branch_name = aws_amplify_branch.main.branch_name
     prefix      = ""
   }
 
-  # https://www.rbp.houseworksinc.co
+  # https://www.---.co
   sub_domain {
     branch_name = aws_amplify_branch.main.branch_name
     prefix      = "www"
